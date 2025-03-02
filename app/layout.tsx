@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { FC, PropsWithChildren } from 'react';
 
+import { Header } from '@/widgets/header';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -25,6 +27,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
